@@ -25,10 +25,7 @@ export default function Home() {
         <React.Fragment>
           <Navigation />
           <section className="py-12">
-            <div
-              style={{ fontSize: "10rem" }}
-              className=" lato-bold  py-28 text-9xl text-brandLime w-1/3 text-center mx-auto"
-            >
+            <div className=" lato-bold  py-28 text-9xl text-brandLime w-1/3 text-center mx-auto">
               <div>HEL</div>
               <div>LO</div>
             </div>
