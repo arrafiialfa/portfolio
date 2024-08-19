@@ -15,10 +15,11 @@ const config: Config = {
       },
       colors: {
         "brandLight": "#d9d9d9",
-        "brandBlue":"#173368",
-        "brandDarkGrey":"#373038",
-        "brandGrey":"#323b4c",
-        "brandLime":"#c1ff72"
+        "brandBlue": "#173368",
+        "brandDarkGrey": "#2a2424",
+        "brandGrey": "#323b4c",
+        "brandLime": "#c1ff72",
+        "brandBlack": "#050404"
       }
     },
   },
