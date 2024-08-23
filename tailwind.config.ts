@@ -19,7 +19,7 @@ const config: Config = {
         "brandDarkGrey": "#2a2424",
         "brandGrey": "#323b4c",
         "brandLime": "#c1ff72",
-        "brandBlack": "#050404"
+        "brandBlack": "#211a1a"
       }
     },
   },
