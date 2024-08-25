@@ -19,6 +19,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Navigation from "@/components/common/Navigation";
 import Timeline from "@/components/Timeline";
+import { projects } from "@/contents/projects";
+import { experiences } from "@/contents/experiences";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -43,7 +45,7 @@ export default function Home() {
   const titleStyle = "";
   return (
     <main>
-      <Layout className="bg-gradient-to-b bg-brandDarkGrey">
+      <Layout className="bg-gradient-to-r from-brandBlack to-brandDarkGrey">
         <React.Fragment>
           <Navigation />
           <section className="py-20">
@@ -74,31 +76,31 @@ export default function Home() {
             <div className=" my-12 flex gap-2 items-center  gap-x-9 shadow-md px-8 py-2 max-w-fit mx-auto rounded-md">
               <a href="https://github.com/yourgithub" className="">
                 <FontAwesomeIcon
-                  className="h-8 md:h-10 hover:text-slate-300 text-slate-50"
+                  className="h-8  hover:text-slate-300 text-slate-50"
                   icon={faGithub}
                 />
               </a>
               <a href="https://github.com/yourgithub" className="">
                 <FontAwesomeIcon
-                  className="h-8 md:h-10 hover:text-green-700 text-green-500"
+                  className="h-8  hover:text-green-700 text-green-500"
                   icon={faWhatsapp}
                 />
               </a>
               <a href="https://github.com/yourgithub" className="">
                 <FontAwesomeIcon
-                  className="h-8 md:h-10 hover:text-slate-300 text-slate-50 "
+                  className="h-8  hover:text-slate-300 text-slate-50 "
                   icon={faEnvelope}
                 />
               </a>
               <a href="https://github.com/yourgithub" className="">
                 <FontAwesomeIcon
-                  className="h-8 md:h-10 hover:text-blue-600 text-blue-400"
+                  className="h-8  hover:text-blue-600 text-blue-400"
                   icon={faLinkedin}
                 />
               </a>
               <a href="https://github.com/yourgithub" className="">
                 <FontAwesomeIcon
-                  className="h-8 md:h-10 hover:text-slate-300 text-slate-50"
+                  className="h-8  hover:text-slate-300 text-slate-50"
                   icon={faFilePdf}
                 />
               </a>
@@ -108,13 +110,13 @@ export default function Home() {
       </Layout>
       <Layout className="pt-24 bg-gradient-to-b  from-brandDarkGrey bg-brandBlack ">
         <section className="my-12 text-xl">
-          <p className="lato-thin  mb-6 mt-6 text-center px-4">
-            Some catchy introduction About My latest project,
-          </p>
-          <div className="pt-12">
-            <p className="lato-thin  mb-6 mt-6 text-center px-4">
-              Management Information System for Worker Placement Company,
+          <div className="p-20 ">
+            <p className="lato-thin-italic  mb-6 mt-6 text-center px-4 ">
+              I am passionate in creating impactful solutions that satisfies
+              stakeholders and add values for businesses,
             </p>
+          </div>
+          <div className="pt-12">
             <div className="grid grid-cols-2 gap-2">
               <div className="col-span-2">
                 <div className=" w-full h-52 bg-white">CARDs</div>
@@ -174,12 +176,12 @@ export default function Home() {
           </div>
         </section>
       </Layout>
-      <Layout className="bg-brandBlack">
+      <Layout className=" bg-brandDarkGrey">
         <section className="text-xl">
           <div className="py-12">
             <div className="w-2/4 md:w-3/5 mx-auto mb-24">
-              <p className="lato-thin  mt-6 text-center px-4">
-                My other project
+              <p className="text-xl  mt-6 text-center px-4">
+                Explore other projects
               </p>
             </div>
             <div className="text-base text-justify my-12">
@@ -193,26 +195,18 @@ export default function Home() {
                 className="flex overflow-x-auto space-x-6 w-full scroll-container"
                 ref={scrollContainerRef}
               >
-                <div className="flex-none w-[calc(100%-1.5rem)] md:w-1/2">
-                  <div className="w-full h-96 bg-white rounded-md shadow-md">
-                    CARDs
+                {projects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="flex-none w-[calc(100%-1.5rem)] md:w-1/2 rounded-md"
+                  >
+                    <div className="relative w-full h-96 bg-white rounded-md shadow-md">
+                      <div className="bg-yellow-600 text-white px-6 py-6 text-base absolute bottom-0 right-0 left-0 h-24">
+                        {project.projectName}
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex-none w-[calc(100%-1.5rem)] md:w-1/2">
-                  <div className="w-full h-96 bg-white rounded-md shadow-md">
-                    CARDs
-                  </div>
-                </div>
-                <div className="flex-none w-[calc(100%-1.5rem)] md:w-1/2">
-                  <div className="w-full h-96 bg-white rounded-md shadow-md">
-                    CARDs
-                  </div>
-                </div>
-                <div className="flex-none w-[calc(100%-1.5rem)] md:w-1/2">
-                  <div className="w-full h-96 bg-white rounded-md shadow-md">
-                    CARDs
-                  </div>
-                </div>
+                ))}
               </div>
 
               {/* Left Scroll Button */}
@@ -238,19 +232,21 @@ export default function Home() {
       <Layout className="bg-brandBlack">
         <section className="text-xl">
           <div className="py-12">
-            <div className="w-2/4 md:w-3/5 mx-auto mb-24">
-              <p className="lato-thin  mt-6 text-center px-4">
-                Work Experiences
+            <div className="w-2/4 md:w-3/5 mx-auto mb-24 py-24">
+              <p className="lato-thin    text-center px-4">Work Experiences</p>
+              <p className="lato-thin-italic  mb-6 mt-6 text-center px-4 ">
+                I am passionate in creating impactful solutions that satisfies
+                stakeholders and add values for businesses,
               </p>
             </div>
-            <div>
-              <Timeline />
+            <div className="">
+              <Timeline experiences={experiences} />
             </div>
           </div>
         </section>
       </Layout>
 
-      <Layout className="pt-24 bg-brandBlack">
+      <Layout className="pt-24 bg-black">
         <div className="">
           <section className=" mt-24 max-w-6xl mx-auto text-white">
             <h2 className="text-xl  mb-4 ">Footer</h2>

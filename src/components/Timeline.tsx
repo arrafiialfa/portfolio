@@ -1,3 +1,4 @@
+import { IExperience } from "@/contents";
 import React from "react";
 const events = [
   {
@@ -16,28 +17,23 @@ const events = [
     image: "https://via.placeholder.com/50",
   },
 ];
-const Timeline = () => {
+const Timeline = ({ experiences }: { experiences: IExperience[] }) => {
   return (
-    <div className="flex flex-col relative ml-5">
-      {events.map((event, index) => (
-        <div className="flex items-start relative mb-5" key={index}>
-          <div className="absolute -left-7 top-2 w-3 h-3 bg-blue-500 rounded-full"></div>
-          <div className="flex items-center">
-            {event.image && (
-              <img
-                src={event.image}
-                alt={event.title}
-                className="w-12 h-12 rounded mr-4"
-              />
-            )}
-            <div className="max-w-md">
-              <h3 className="text-lg font-semibold">{event.title}</h3>
-              <p className="text-sm text-gray-600 mt-1">{event.description}</p>
+    <div className="flex flex-col relative ml-5 gap-y-10">
+      {experiences.map((experience) => (
+        <div className="flex items-center relative mb-5" key={experience.id}>
+          <div className="pl-6 pr-20 ">2019 - 2020</div>
+          <div className=" basis-40 grow ">
+            <div className="">
+              <h3 className="text-lg font-semibold">{experience.position}</h3>
+              <div className="w-full h-96 rounded bg-white" />
+              <p className="text-sm text-white mt-1 text-justify">
+                {experience.description}
+              </p>
             </div>
           </div>
         </div>
       ))}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-500"></div>
     </div>
   );
 };
