@@ -17,19 +17,41 @@ const events = [
     image: "https://via.placeholder.com/50",
   },
 ];
-const Timeline = ({ experiences }: { experiences: IExperience[] }) => {
+const Timeline = ({
+  experiences,
+  bannerClassName,
+}: {
+  experiences: IExperience[];
+  bannerClassName?: string;
+}) => {
   return (
     <div className="flex flex-col relative ml-5 gap-y-10">
       {experiences.map((experience) => (
-        <div className="flex items-center relative mb-5" key={experience.id}>
-          <div className="pl-6 pr-20 ">2019 - 2020</div>
-          <div className=" basis-40 grow ">
-            <div className="">
-              <h3 className="text-lg font-semibold">{experience.position}</h3>
-              <div className="w-full h-96 rounded bg-white" />
-              <p className="text-sm text-white mt-1 text-justify">
-                {experience.description}
-              </p>
+        <div
+          className="grid grid-cols-4 gap-8 items-center relative mb-5"
+          key={experience.id}
+        >
+          <div className=" col-span-1 p-4">{experience.timeline}</div>
+          <div className=" col-span-3 ">
+            <div className="px-4 py-6 shadow-md">
+              <div
+                className={"p-6 bg-brandBlue rounded-t-md " + bannerClassName}
+              >
+                <h3 className="text-lg font-semibold ">
+                  {experience.position}
+                </h3>
+                <p className="text-lg">{experience.company}</p>
+              </div>
+              {/* <div className="w-full h-96 rounded bg-white" /> */}
+              <ul>
+                {experience.description.map((desc) => {
+                  return (
+                    <li key={desc} className="text-base mt-1 text-justify">
+                      {desc}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>

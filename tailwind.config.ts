@@ -20,9 +20,14 @@ const config: Config = {
         "brandGrey": "#323b4c",
         "brandLime": "#c1ff72",
         "brandBlack": "#211a1a"
-      }
+      },
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 };
 export default config;

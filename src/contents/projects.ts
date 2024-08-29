@@ -1,5 +1,12 @@
 import { IProject } from ".";
 
+export const projectHighlight = [
+
+
+
+
+]
+
 export const projects: IProject[] = [
     {
         id: 2,
@@ -21,7 +28,7 @@ export const projects: IProject[] = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         projectName: 'Laravel Bengkel App (Motobuddies)',
         repository: "https://github.com/ilhamn65/ADSI-MotoBuddies-1",
         techIcon: [],
@@ -33,10 +40,7 @@ export const projects: IProject[] = [
         repository: "private",
         techIcon: [],
         description: [
-            'A web application for managing and tracking various projects, tasks, and timelines.',
-            'Built using Next.js, React, and Tailwind CSS.',
-            'Integrated with MongoDB for data storage and real-time updates.',
-            'Hosted on Vercel for scalability and easy deployment.',
+            "A project where I implemented a comprehensive management information system that significantly improved company operations. With features such as progress tracking of each worker, monitoring and reporting, and robust user authentication and authorization mechanisms",
         ]
     },
 ];
