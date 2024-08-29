@@ -91,16 +91,16 @@ export default function Home() {
         <section className="py-20">
           <div
             style={{ letterSpacing: "0.2em" }}
-            className="lato-bold py-28 text-8xl sm:text-9xl text-brandLime text-center"
+            className="lato-bold py-28 text-8xl sm:text-9xl text-brandLime text-center "
           >
-            <div className="flex justify-center gap-8">
-              <div className="animate-pulse">H</div>{" "}
-              <div className="animate-bounce">E</div>{" "}
-              <div className="animate-bounce">L</div>
+            <div className="flex justify-center gap-8 ">
+              <div className="intersect:animate-bounce animate-ease-out  ">
+                H
+              </div>{" "}
+              <div className="">E</div> <div className="">L</div>
             </div>
             <div className="flex justify-center gap-8">
-              <div className="animate-bounce">L</div>{" "}
-              <div className="animate-bounce">O</div>{" "}
+              <div className="">L</div> <div className="">O</div>{" "}
             </div>
           </div>
           <div className="flex flex-wrap  justify-center gap-2 text-center text-xl">
@@ -121,7 +121,7 @@ export default function Home() {
               <p className=""></p>
             </div>
           </div>
-          <div className=" my-12 flex gap-2 items-center  gap-x-9 shadow-md px-8 py-2 max-w-fit mx-auto rounded-md">
+          <div className=" my-12 flex gap-2 items-center  gap-x-9 shadow-md px-8 py-2 max-w-fit mx-auto rounded-md intersect:animate-fade-left animate-once animate-ease-out ">
             <a href="https://github.com/arrafiialfa" className="">
               <FontAwesomeIcon
                 className="h-8  hover:text-slate-300 text-slate-50"
@@ -158,7 +158,7 @@ export default function Home() {
       <Layout className="pt-24 bg-gradient-to-b  from-brandDarkGrey bg-brandBlack ">
         <section className="my-12 text-xl">
           <div className="pb-20 px-3 md:px-20 xl:px-32 2xl:px-52">
-            <p className="lato-thin-italic  mb-6 mt-6 text-center px-4 text-lime-100">
+            <p className="lato-thin-italic  mb-6 mt-6 text-center px-4 text-lime-100 intersect:animate-fade-down animate-once animate-ease-out">
               I am passionate in creating impactful solutions that satisfies
               stakeholders and add values for businesses.{" "}
               <span className="font-semibold">
@@ -169,7 +169,7 @@ export default function Home() {
           <div className="text-lg font-semibold text-center p-6  md:px-20  bg-brandBlack rounded">
             A Management Information System of Migrant Worker Placement Company
           </div>
-          <div className="col-span-1 px-4 pt-8">
+          <div className="col-span-1 px-4 pt-8 ">
             {projects[3].description.map((desc) => {
               return (
                 <div key={desc} className="text-base text-justify my-4">
@@ -182,7 +182,7 @@ export default function Home() {
             })}
           </div>
           <div className="pt-12">
-            <div className="relative">
+            <div className="relative intersect:animate-fade-right animate-once animate-ease-out">
               <div
                 className="flex overflow-x-auto space-x-4 w-full scroll-container"
                 ref={scrollContainerRef}
@@ -192,7 +192,10 @@ export default function Home() {
                     key={highlight.title}
                     className="flex-none w-[calc(100%-1.5rem)] md:w-1/2 rounded-sm "
                   >
-                    <div className="relative w-full h-96 cursor-pointer bg-white rounded-sm shadow-md overflow-clip ">
+                    <div
+                      style={{ height: "24rem" }}
+                      className="relative w-full cursor-pointer bg-white rounded-sm shadow-md overflow-clip "
+                    >
                       <Image
                         className="rounded-sm p-1"
                         alt={highlight.title}
@@ -200,11 +203,11 @@ export default function Home() {
                         fill={true}
                         objectFit="cover"
                       />
-                      <div className="cursor-pointer bg-white/50 backdrop-blur-lg rounded-t-sm text-slate-800  text-xl px-8 py-6 absolute bottom-0 -right-1 -left-1 shadow">
+                      <div className="cursor-pointer h-52 bg-white/50 backdrop-blur-2xl rounded-t-sm text-slate-800  text-xl px-8 py-6 absolute bottom-0 -right-1 -left-1 shadow">
                         <div className=" text-slate-100 px-5 py-0.5 bg-brandBlue rounded-md shadow">
                           {highlight.title}
                         </div>
-                        <div className="text-sm text-justify my-4 px-2">
+                        <div className="animate-fade-up animate-once animate-ease-out text-sm text-justify my-4 px-2">
                           {highlight.description}
                         </div>
                       </div>
@@ -271,61 +274,22 @@ export default function Home() {
             </div>
 
             <div className="py-32 px-3 md:px-20 xl:px-32 2xl:px-52">
-              <p className="lato-thin-italic  mb-6 mt-6 text-center px-4 text-lime-100">
-                The development process followed the full SDLC methodology, from
-                business process modeling and requirements engineering to
-                design, implementation, and rigorous functional and unit
-                testing.
+              <p className="lato-thin-italic  mb-6 mt-6 text-center px-4 text-lime-100 intersect:animate-fade-up animate-once animate-ease-out">
+                The development process followed Iterative SDLC methodology,
+                from business process modeling and requirements engineering to
+                design, implementation, rigorous functional and unit testing to
+                user review for further development iterations.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-2 gap-x-8 items-center">
-              <div className="col-span-1">
-                <div className="flex justify-center items-center gap-x-6">
-                  <div className="">
-                    <Infographic />
-                  </div>
-                  <div className="z-20">
-                    <p className="text-base text-justify px-6 py-6 ">
-                      Of the garden was nothing short of enchanting. Vibrant
-                      flowers of every hue danced in the breeze, their petals
-                      glistening with morning dew. The air was filled with the
-                      sweet scent of blooming jasmine and the earthy aroma of
-                      freshly turned soil
-                    </p>
-                    <div className="flex justify-center gap-6 mt-12">
-                      <button>
-                        <FontAwesomeIcon
-                          className="text-2xl hover:text-slate-300 text-lime-200"
-                          icon={faArrowAltCircleLeft}
-                        />
-                      </button>
-                      <button>
-                        <FontAwesomeIcon
-                          className="text-2xl hover:text-slate-300 text-lime-200"
-                          icon={faArrowAltCircleRight}
-                        />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Infographic />
           </div>
         </section>
       </Layout>
       <Layout className=" bg-brandDarkGrey">
-        <section className="text-xl">
+        <section className="text-xl pb-24">
           <div className="py-12">
-            <div className="w-2/4 md:w-3/5 mx-auto mb-24">
-              <p className="text-xl  mt-6 text-center px-4">
-                Explore other projects
-              </p>
-            </div>
-            <div className="text-base text-justify my-12">
-              Of the garden was nothing short of enchanting. Vibrant flowers of
-              every hue danced in the breeze, their petals glistening with
-              morning dew. The air was filled with the sweet scent of blooming
-              jasmine and the earthy aroma of freshly turned soil
+            <div className="text-center text-2xl  py-20">
+              Explore Other Projects
             </div>
             <div className="relative">
               <div className="flex overflow-x-auto space-x-6 w-full scroll-container">

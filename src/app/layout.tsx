@@ -22,26 +22,34 @@ export default function RootLayout({
     <html className="" lang="en">
       <body className={inter.className}>
         {children}
-        <Layout className="pt-32 bg-brandDarkGrey">
+        <Layout className="pt-32 bg-gradient-to-r from-brandBlack to-brandDarkGrey">
           <footer className=" py-6">
             <div className="container mx-auto px-4 sm:px-20">
-              <div className="flex justify-between gap-4">
+              <div className="flex justify-between gap-4 xl:gap-x-12 text-sm">
                 {/* Address */}
-                <div>
-                  <h4 className="text-lg font-semibold">Address</h4>
-                  <p>123 Main Street, City, Country</p>
+                <div className="basis-1/3">
+                  <h4 className="text-lg font-semibold text-lime-100">
+                    Address
+                  </h4>
+                  <p>
+                    Pamualang Barat, Tangerang Selatan, Banten (Dibawah JKT)
+                  </p>
                 </div>
 
                 {/* Contact Information */}
-                <div>
-                  <h4 className="text-lg font-semibold">Contact</h4>
-                  <p>WhatsApp: +1234567890</p>
-                  <p>Email: example@example.com</p>
+                <div className="basis-1/3">
+                  <h4 className="text-lg font-semibold text-lime-100">
+                    Contact
+                  </h4>
+                  <p>+62 821 2358 7778</p>
+                  <p>arrafiialfa.m@gmail.com</p>
                 </div>
 
                 {/* Social Media */}
-                <div className="">
-                  <h4 className="text-lg font-semibold">Follow Me</h4>
+                <div className="basis-1/3">
+                  <h4 className="text-lg font-semibold text-lime-100">
+                    Follow Me
+                  </h4>
                   <p>
                     <a
                       href="https://github.com/yourusername"
@@ -83,6 +91,10 @@ export default function RootLayout({
             </div>
           </footer>
         </Layout>
+        <script
+          defer
+          src="https://unpkg.com/tailwindcss-intersect@2.x.x/dist/observer.min.js"
+        ></script>
       </body>
     </html>
   );
