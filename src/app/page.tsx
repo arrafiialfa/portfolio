@@ -97,7 +97,7 @@ export default function Home() {
             className="lato-bold py-28 text-8xl sm:text-9xl text-brandLime text-center "
           >
             <div className="flex justify-center gap-8 ">
-              <div className="intersect:animate-bounce animate-ease-out  ">
+              <div className="bg-blue-700 pr-8 ml-8 text-white intersect:animate-bounce animate-ease-out  ">
                 H
               </div>{" "}
               <div className="">E</div> <div className="">L</div>

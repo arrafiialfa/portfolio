@@ -69,7 +69,7 @@ const SDLCInfographic: React.FC = () => {
   return (
     <div className="grid grid-cols-1 gap-2 gap-x-8 items-center pb-40">
       <div className="col-span-1">
-        <div className="flex justify-center items-end gap-x-6">
+        <div className="flex flex-wrap lg:flex-nowrap justify-center items-end gap-x-6">
           <div className="mt-32">
             <div className="relative flex items-center justify-center w-96 h-96 z-0">
               <div className="absolute w-48 h-48 rounded-full  " />
@@ -102,12 +102,14 @@ const SDLCInfographic: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="z-20 bg-black/20 rounded-md py-12 backdrop-blur-sm intersect:animate-fade-left animate-once animate-ease-out">
-            <h1 className="font-bold text-2xl px-6">{onDisplay.name}</h1>
-            <p className="text-base text-justify px-6 py-6 ">
-              {onDisplay.description}
-            </p>
-            <div className="flex justify-center gap-6 mt-12">
+          <div className="relative flex flex-col justify-between z-20 bg-black/20 max-w-1/2  h-96 rounded-md py-12 backdrop-blur-sm intersect:animate-fade-left animate-once animate-ease-out">
+            <div>
+              <h1 className="font-bold text-2xl px-6">{onDisplay.name}</h1>
+              <p className="text-base text-justify px-6 py-6 ">
+                {onDisplay.description}
+              </p>
+            </div>
+            <div className="fixed bottom-10 right-0 left-0 flex justify-center gap-6 mt-12">
               <button
                 onClick={(e) => {
                   e.preventDefault();
