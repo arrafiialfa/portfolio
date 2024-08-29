@@ -19,12 +19,15 @@ import {
   faLinkedin,
   faReact,
   faNodeJs,
+  faGithubAlt,
+  faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import Navigation from "@/components/common/Navigation";
 import { projects } from "@/contents/projects";
 
 import Image from "next/image";
 import Infographic from "@/components/Infographic";
+import { faSquareGithub } from "@fortawesome/free-brands-svg-icons/faSquareGithub";
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -84,7 +87,7 @@ export default function Home() {
 
   return (
     <main>
-      <Layout className="sticky top-0 shadow-md bg-gradient-to-r from-brandBlack to-brandDarkGrey z-40 py-5">
+      <Layout className="sticky top-0 shadow-md bg-gradient-to-r from-brandBlack to-brandDarkGrey z-40 ">
         <Navigation />
       </Layout>
       <Layout className="bg-gradient-to-r from-brandBlack to-brandDarkGrey">
@@ -170,16 +173,16 @@ export default function Home() {
             A Management Information System of Migrant Worker Placement Company
           </div>
           <div className="col-span-1 px-4 pt-8 ">
-            {projects[3].description.map((desc) => {
-              return (
-                <div key={desc} className="text-base text-justify my-4">
-                  {desc}.{" "}
-                  <span className="font-semibold">
-                    See below for feature details
-                  </span>
-                </div>
-              );
-            })}
+            <div className="text-base text-justify my-4">
+              A project where I implemented a comprehensive management
+              information system that significantly improved company operations.
+              With features such as progress tracking of each worker, monitoring
+              and reporting, and robust user authentication and authorization
+              mechanisms
+              <span className="font-semibold">
+                See below for feature details
+              </span>
+            </div>
           </div>
           <div className="pt-12">
             <div className="relative intersect:animate-fade-right animate-once animate-ease-out">
@@ -261,7 +264,7 @@ export default function Home() {
                   />
                 </Link>
                 <Link
-                  className="animate-bounce"
+                  className="intersect:animate-bounce animate-once"
                   href="https://abkcms-git-dev-arrafiialfas-projects.vercel.app/"
                 >
                   Demo
@@ -285,41 +288,52 @@ export default function Home() {
           </div>
         </section>
       </Layout>
-      <Layout className=" bg-brandDarkGrey">
+      <div className="px-6 lg:px-32  mx-auto bg-gradient-to-r from-brandBlack to-black">
         <section className="text-xl pb-24">
-          <div className="py-12">
-            <div className="text-center text-2xl  py-20">
+          <div className="py-24">
+            <div className="text-center text-2xl  py-20 text-slate-200 font-bold">
               Explore Other Projects
             </div>
-            <div className="relative">
-              <div className="flex overflow-x-auto space-x-6 w-full scroll-container">
-                {projects.map((project) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {projects.map((project) => {
+                return (
                   <div
                     key={project.id}
-                    className="flex-none w-[calc(100%-1.5rem)] md:w-1/2 rounded-md"
+                    className="flex flex-col  justify-between grow p-6 border border-solid  border-opacity-70 border-slate-100 rounded-md"
                   >
-                    <button className="relative w-full h-96 bg-white rounded-md shadow-md">
-                      <div className="bg-slate-300 text-slate-700 px-6 py-6 text-base absolute bottom-0 right-0 left-0 h-24">
+                    <div>
+                      <div className="font-semibold mb-4">
                         {project.projectName}
                       </div>
-                    </button>
+                      <div className="text-slate-100 font-light text-base ">
+                        {project.description}
+                      </div>
+                    </div>
+                    <div className="flex gap-4 text-right text-base font-semibold text-slate-300 mt-8">
+                      <Link className="" href={project.repository ?? "#"}>
+                        Repository
+                        <FontAwesomeIcon
+                          className="px-2 hover:text-blue-600 text-blue-300 "
+                          icon={faGithub}
+                        />
+                      </Link>
+                      {project.demo && (
+                        <Link className="" href={project.demo ?? "#"}>
+                          Demo
+                          <FontAwesomeIcon
+                            className="px-2 hover:text-blue-600 text-blue-300"
+                            icon={faComputer}
+                          />
+                        </Link>
+                      )}
+                    </div>
                   </div>
-                ))}
-              </div>
-
-              {/* Left Scroll Button */}
-              <button className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md">
-                &#9664;
-              </button>
-
-              {/* Right Scroll Button */}
-              <button className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md">
-                &#9654;
-              </button>
+                );
+              })}
             </div>
           </div>
         </section>
-      </Layout>
+      </div>
     </main>
   );
 }

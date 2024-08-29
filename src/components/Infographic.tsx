@@ -102,7 +102,7 @@ const SDLCInfographic: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="z-20 bg-slate-800/50 rounded-md py-12 backdrop-blur-sm intersect:animate-fade-left animate-once animate-ease-out">
+          <div className="z-20 bg-black/20 rounded-md py-12 backdrop-blur-sm intersect:animate-fade-left animate-once animate-ease-out">
             <h1 className="font-bold text-2xl px-6">{onDisplay.name}</h1>
             <p className="text-base text-justify px-6 py-6 ">
               {onDisplay.description}

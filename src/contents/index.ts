@@ -26,6 +26,8 @@ export interface IProject {
   timeline?: string;
   repository?: string;
   preview?: string;
+  readMore?: string
+  demo?: string;
 }
 
 
