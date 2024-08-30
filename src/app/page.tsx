@@ -267,11 +267,17 @@ export default function Home() {
                   className="intersect:animate-bounce animate-once"
                   href="https://abkcms-git-dev-arrafiialfas-projects.vercel.app/"
                 >
-                  Demo
+                  Demo,
                   <FontAwesomeIcon
                     className="px-2 hover:text-blue-600 text-white"
                     icon={faComputer}
                   />
+                  <div className="text-xs text-blue-100">
+                    <div className="">Login with</div>
+                    <div className="font-light">
+                      {" 'admin' "} and {" '123123' "}
+                    </div>
+                  </div>
                 </Link>
               </div>
             </div>
