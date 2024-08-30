@@ -52,7 +52,7 @@ export default function RootLayout({
                   </h4>
                   <p>
                     <a
-                      href="https://github.com/yourusername"
+                      href="https://github.com/arrafiialfa"
                       className="hover:text-gray-400"
                     >
                       GitHub
@@ -60,7 +60,7 @@ export default function RootLayout({
                   </p>
                   <p>
                     <a
-                      href="https://instagram.com/yourusername"
+                      href="https://www.instagram.com/arafiialfa/tagged/"
                       className="hover:text-gray-400"
                     >
                       Instagram
@@ -80,7 +80,10 @@ export default function RootLayout({
                 Take a look at the repo{" "}
                 <span className="font-semibold">
                   here.{" "}
-                  <a href="https://github.com/yourgithub" className="">
+                  <a
+                    href="https://github.com/arrafiialfa/portfolio"
+                    className=""
+                  >
                     <FontAwesomeIcon
                       className="h-5  hover:text-slate-300 text-slate-50"
                       icon={faGithub}
