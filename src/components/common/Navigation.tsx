@@ -3,7 +3,7 @@ import { faHouse, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 export default function Navigation() {
   return (
-    <nav className=" text-slate-700 dark:text-slate-200 flex items-center justify-between px-6 py-1">
+    <nav className=" text-slate-200 flex items-center justify-between px-6 py-1">
       <Link href="/">
         <FontAwesomeIcon className="hover:text-slate-500" icon={faHouse} />
       </Link>

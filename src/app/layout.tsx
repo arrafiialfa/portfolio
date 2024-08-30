@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="" lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + " text-slate-100"}>
         {children}
         <Layout className="pt-32 bg-gradient-to-r from-brandBlack to-brandDarkGrey">
           <footer className=" py-6">

@@ -86,7 +86,7 @@ export default function Home() {
   ];
 
   return (
-    <main>
+    <main className="">
       <Layout className="sticky top-0 shadow-md bg-gradient-to-r from-brandBlack to-brandDarkGrey z-40 ">
         <Navigation />
       </Layout>
@@ -178,7 +178,7 @@ export default function Home() {
               information system that significantly improved company operations.
               With features such as progress tracking of each worker, monitoring
               and reporting, and robust user authentication and authorization
-              mechanisms
+              mechanisms{" "}
               <span className="font-semibold">
                 See below for feature details
               </span>
