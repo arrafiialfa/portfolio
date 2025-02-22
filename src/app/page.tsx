@@ -97,7 +97,7 @@ export default function Home() {
             className="lato-bold py-28 text-8xl sm:text-9xl text-brandLime text-center "
           >
             <div className="flex justify-center gap-8 ">
-              <div className="bg-blue-700 pr-8 ml-8 text-white intersect:animate-bounce animate-ease-out  ">
+              <div className="bg-blue-700 pr-8 ml-8 text-white animate-ease-out  ">
                 H
               </div>{" "}
               <div className="">E</div> <div className="">L</div>
@@ -281,7 +281,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-
             <div className="py-32 px-3 md:px-20 xl:px-32 2xl:px-52">
               <p className="lato-thin-italic  mb-6 mt-6 text-center px-4 text-lime-100 intersect:animate-fade-up animate-once animate-ease-out">
                 The development process followed Iterative SDLC methodology,
